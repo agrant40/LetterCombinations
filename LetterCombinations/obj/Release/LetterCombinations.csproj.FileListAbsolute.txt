@@ -1,0 +1,5 @@
+c:\dev\LetterCombinations\LetterCombinations\bin\Release\LetterCombinations.exe.config
+c:\dev\LetterCombinations\LetterCombinations\bin\Release\LetterCombinations.exe
+c:\dev\LetterCombinations\LetterCombinations\bin\Release\LetterCombinations.pdb
+c:\dev\LetterCombinations\LetterCombinations\obj\Release\LetterCombinations.exe
+c:\dev\LetterCombinations\LetterCombinations\obj\Release\LetterCombinations.pdb
