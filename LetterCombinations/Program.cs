@@ -20,14 +20,14 @@ namespace LetterCombinations
             //Remove whitespace
             input = Regex.Replace(input, @"\s+", "");
             //Call recursive function
-            permutation("", input);
+            permutation("", input, input.Length);
 
             //Write results to file
             System.IO.File.WriteAllLines(@"output.txt", results);
 
         }
 
-        private static void permutation(string prefix, string str)
+        private static void permutation(string prefix, string str, int origLength)
         {
 
 
@@ -37,12 +37,15 @@ namespace LetterCombinations
                 results.Add(prefix);
             }
             else
-            {
-                results.Add(prefix);
+            {   //Filter out results that aren't the same length as the original word
+                if (prefix.Length == origLength)
+                {
+                    results.Add(prefix);
+                }
 
                 for (int i = 0; i < length; i++)
                 {
-                    permutation(prefix + str[i], str.Substring(0, i) + str.Substring(i + 1));
+                    permutation(prefix + str[i], str.Substring(0, i) + str.Substring(i + 1), origLength);
                 }
             }
         }
